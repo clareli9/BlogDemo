@@ -1,6 +1,7 @@
 package com.clareli.demo.po;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +12,7 @@ public class Type {
     @Id
     @GeneratedValue
     private Long id;
+    @NotBlank(message = "The type name can not be empty")
     private String name;
 
     @OneToMany(mappedBy = "type")
