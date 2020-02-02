@@ -1,7 +1,9 @@
 package com.clareli.demo.po;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "t_blog")
@@ -23,6 +25,16 @@ public class Blog {
     private Date createTime;
     @Temporal(TemporalType.TIMESTAMP)
     private Date updateTime;
+
+    // Relationship with other objects
+    @ManyToOne
+    private Type type;
+    @ManyToMany
+    private List<Tag> tags = new ArrayList<>();
+    @ManyToOne
+    private User user;
+    @OneToMany(mappedBy = "blog")
+    private List<Comment> comments = new ArrayList<>();
 
     public Blog() {
     }
@@ -129,5 +141,56 @@ public class Blog {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
+    }
+
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
+
+    @Override
+    public String toString() {
+        return "Blog{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", firstPicture='" + firstPicture + '\'' +
+                ", flag='" + flag + '\'' +
+                ", views=" + views +
+                ", appreciation=" + appreciation +
+                ", shareStatement=" + shareStatement +
+                ", commentable=" + commentable +
+                ", published=" + published +
+                ", recommend=" + recommend +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                '}';
     }
 }

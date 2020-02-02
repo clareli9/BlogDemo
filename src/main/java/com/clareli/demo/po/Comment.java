@@ -1,7 +1,9 @@
 package com.clareli.demo.po;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "t_comment")
@@ -15,6 +17,18 @@ public class Comment {
     private String avatar;
     @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
+
+    @ManyToOne
+    private Blog blog;
+
+    @OneToMany
+    private List<Comment> replyComments = new ArrayList<>();
+
+    @ManyToOne
+    private Comment parentComment;
+
+    public Comment() {
+    }
 
     public Long getId() {
         return id;
@@ -62,6 +76,14 @@ public class Comment {
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
+    }
+
+    public Blog getBlog() {
+        return blog;
+    }
+
+    public void setBlog(Blog blog) {
+        this.blog = blog;
     }
 
     @Override
