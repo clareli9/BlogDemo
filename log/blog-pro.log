@@ -1,0 +1,4 @@
+2020-02-01 21:19:40.196  INFO 54821 --- [restartedMain] com.clareli.demo.BlogApplication         : Starting BlogApplication on Bos-MacBook-Pro.local with PID 54821 (/Users/clareli/Documents/target/classes started by clareli in /Users/clareli/Documents/blog)
+2020-02-01 21:19:40.196  INFO 54821 --- [restartedMain] com.clareli.demo.BlogApplication         : The following profiles are active: pro
+2020-02-01 21:19:40.679  WARN 54821 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-01 21:19:41.069  INFO 54821 --- [restartedMain] com.clareli.demo.BlogApplication         : Started BlogApplication in 5.912 seconds (JVM running for 363.111)
