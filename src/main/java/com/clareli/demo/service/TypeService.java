@@ -4,6 +4,8 @@ import com.clareli.demo.po.Type;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.List;
+
 public interface TypeService {
 
     // Add
@@ -16,6 +18,8 @@ public interface TypeService {
 
     // Page search
     Page<Type> listType(Pageable pageable);
+
+    List<Type> listType();
 
     // Update/Modify
     Type updateType(Long id, Type type);
