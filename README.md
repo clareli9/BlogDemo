@@ -11,3 +11,35 @@ The purpose of this project is to better understand the Java Spring Boot framewo
 This project is not deployed on the platform like Heroku or Amazon EC2.
 
 ## User Interface
+
+
+**Admin/User Login**:
+
+
+<img src = "https://github.com/clareli9/BlogDemo/blob/master/images/Admin_login.png">
+
+
+**Homepage**:
+
+
+<img src = "https://github.com/clareli9/BlogDemo/blob/master/images/Homepage.png">
+
+
+**Profile page**:
+
+
+<img src = "https://github.com/clareli9/BlogDemo/blob/master/images/About_me.png">
+
+
+**Search blogs with tags**:
+
+
+<img src = "https://github.com/clareli9/BlogDemo/blob/master/images/Search_result_with_tag.png">
+
+
+**List of Blogs**:
+
+
+<img src = "https://github.com/clareli9/BlogDemo/blob/master/images/Blog_list.png">
+
+
